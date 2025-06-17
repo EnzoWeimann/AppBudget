@@ -1,0 +1,38 @@
+<!-- App header -->
+<div class="row justify-content-center">
+
+  <!-- Main container -->
+  <div class="p-4 rounded border border-primary text-center">
+
+    <!-- Available budget -->
+    <h4 class="mb-3">Available budget:</h4>
+    <div class="display-3 fw-bold text-warning">
+      {{availableBudget | currency:'USD':'$'}}
+    </div>
+
+    <!-- Incomes and expenses section -->
+    <div class="row mt-4 justify-content-center">
+
+      <!-- Incomes -->
+      <div class="col-md-5 text-center">
+        <div class="text-uppercase">INCOMES</div>
+        <div class="text-success h5">
+          {{totalIncome | currency:'USD':'$'}}
+        </div>
+      </div>
+
+      <!-- Expenses -->
+      <div class="col-md-5 text-center">
+        <div class="text-uppercase">EXPENSES</div>
+        <div class="text-danger h5">
+          {{totalExpense | currency:'USD':'$'}}
+          
+          <!-- Percentage of expenses in relation to incomes -->
+          <span class="badge bg-success ms-2">
+            {{expensePercentage | percent:'1.1'}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

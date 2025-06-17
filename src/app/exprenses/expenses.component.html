@@ -1,0 +1,34 @@
+<!-- Component title -->
+<h2 class="text-center text-danger">Expenses</h2>
+
+<!-- Unordered list to list all individual expenses -->
+<ul class="list-group mt-3">
+
+    <!-- Creates an item list for every expense in the array -->
+    @for(expense of expenses; track expense) {
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+
+            <!-- Description -->
+            <span class="flex-grow-1">
+                {{expense.description}}
+            </span>
+
+            <!-- Amount (negative because is an expense) -->
+            <span class="d-flex align-items-center mx-3">
+                <span class="text-danger">
+                    - {{expense.amount | currency:'USD':'$'}}
+                </span>
+
+                <!-- Perecentage relative to total income -->
+                <span class="badge bg-success ms-2">
+                    {{calculatePercentage(expense) | percent:'1.1'}}
+                </span>
+            </span>
+
+            <!-- Button to delete the expense -->
+            <button class="btn btn-sm btn-danger" (click)="deleteExpense(expense)">
+                <i class="bi bi-x-circle"></i>
+            </button>
+        </li>
+    }
+</ul>

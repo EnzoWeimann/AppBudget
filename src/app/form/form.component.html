@@ -1,0 +1,46 @@
+<!-- Main container -->
+<div class="row justify-content-center mt-4">
+    <div class="col-md-8">
+
+      <!-- Form that validates inputs -->
+      <form class="row g-2" #forms="ngForm" (ngSubmit)="forms.form.valid && addNew()">
+        
+        <!-- Selector to add an income or an expense, change colours based on the choice -->
+        <div class="col-auto">
+          <select (change)="typeOperation($event)" class="form-select bg-success"
+              [ngClass]="{'bg-danger': type === 'expenseOperation', 
+                         'bg-success': type === 'incomeOperation'}">
+            <option value="incomeOperation" selected>+</option>
+            <option value="expenseOperation">-</option>
+          </select>
+        </div>
+
+        <!-- Description input, generic for both income and expense -->
+        <div class="col-md-5">
+          <input type="text" class="form-control border-success"
+                [(ngModel)]="descriptionInput" name="descriptionInput"
+                [ngClass]="{'bg-danger': type === 'expenseOperation', 
+                            'bg-success': type === 'incomeOperation'}" 
+                            placeholder="Description" required />
+        </div>
+
+        <!-- Amount input, generic for both income and expense -->
+        <div class="col-md-3">
+          <input type="number" class="form-control border-success" 
+                [(ngModel)]="amountInput" name="amountInput"
+                [ngClass]="{'bg-danger': type === 'expenseOperation', 
+                            'bg-success': type === 'incomeOperation'}"
+                            placeholder="Amount" required />
+        </div>
+
+        <!-- Button to submit form -->
+        <div class="col-1">
+          <button type="submit" class="btn" 
+              [ngClass]="{'bg-danger': type === 'expenseOperation', 
+                         'bg-success': type === 'incomeOperation'}">
+            <i class="bi bi-check-circle"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+</div>
