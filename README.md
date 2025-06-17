@@ -9,6 +9,11 @@ This web app developed with Angular, allows the user to manage income and expens
 - Bootstrap
 - Compodoc (for documentation)
 
+## 🖼️ Preview
+
+  ![Screenshot 1](assets/image1.png)
+  ![Screenshot 2](assets/image2.png)
+
 ## 📦 Instalation
 
 1. Clone repository:
@@ -41,11 +46,6 @@ This web app developed with Angular, allows the user to manage income and expens
   ```bash
     npm run docs
   ```
-
-## 🖼️ Preview
-
-  ![Screenshot 1](assets/image1.png)
-  ![Screenshot 2](assets/image2.png)
 
 ## ✅ Need to do for next version
  - Connect to DB for data persistence
