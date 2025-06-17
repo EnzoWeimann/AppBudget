@@ -21,12 +21,12 @@ This web app developed with Angular, allows the user to manage income and expens
 ```
 3. Install dependencies:
 ```bash
-npm install
+  npm install
 ```
 
 ## 🚩 Run application
   ```bash
-  ng serve -o
+    ng serve -o
   ```
   It should open automatically in http://localhost:4200
 
