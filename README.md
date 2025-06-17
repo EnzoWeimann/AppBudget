@@ -12,13 +12,13 @@ This web app developed with Angular, allows the user to manage income and expens
 ## 📦 Instalation
 
 1. Clone repository:
-   ```bash
+```bash
    git clone https://github.com/EnzoWeimann/AppBudget.git
-   ```
+ ```
 2. Enter the project directory:
-   ```bash
+```bash
    cd AppBudget
-   ```
+```
 3. Install dependencies:
 ```bash
 npm install
@@ -28,7 +28,7 @@ npm install
   ```bash
   ng serve -o
   ```
-    It should open automatically in http://localhost:4200
+  It should open automatically in http://localhost:4200
 
 ## 📚 Documents
 
